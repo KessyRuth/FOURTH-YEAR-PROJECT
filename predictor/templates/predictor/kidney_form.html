@@ -1,0 +1,51 @@
+<!-- predictor/templates/predictor/kidney_form.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kidney Disease Prediction</title>
+    <link rel="stylesheet" href="{% static 'predictor/css/style.css' %}">
+</head>
+<body>
+    <h2>Kidney Disease Prediction Form</h2>
+    <form method="post" action="{% url 'predict_kidney_disease' %}">
+        {% csrf_token %}
+        <label for="age">age:</label>
+        <input type="text" name="age" required>
+        <label for="blood_pressure">blood_pressure:</label>
+        <input type="text" name="blood_pressure" required>
+        <label for="albumin">albumin:</label>
+        <input type="text" name="albumin" required>
+        <label for="sugar">sugar:</label>
+        <input type="text" name="sugar" required>
+        <label for="red_blood_cells">red_blood_cells:</label>
+        <input type="text" name="red_blood_cells" required>
+        <label for="pus_cell">pus_cell:</label>
+        <input type="text" name="pus_cell" required>
+        <label for="pus_cell_clump">pus_cell_clump:</label>
+        <input type="text" name="pus_cell_clumps" required>
+        <label for="bacteria">bacteria:</label>
+        <input type="text" name="bacteria" required>
+        <label for="blood_glucose_random">blood_glucose_random:</label>
+        <input type="text" name="blood_glucose_random" required>
+        <label for="blood_urea">blood_urea:</label>
+        <input type="text" name="blood_area" required>
+        <label for="serem_creatine">serum_creatinine:</label>
+        <input type="text" name="serem_creatine" required>
+        <label for="white_bloood_cells">white_bloood_cell:</label>
+        <input type="text" name="white_blood_cells" required>
+        <label for="hypertension">ypertension:</label>
+        <input type="text" name="hypertension" required>
+        <label for="diabetics_mellitus">diabetics_mellitus:</label>
+        <input type="text" name="diabetics_mellitus" required>
+        <label for="coronary_artery_disease">coronary_artery_disease:</label>
+        <input type="text" name="coronary_artery_disease" required>
+        <label for="pedal_edema">pedal_edema:</label>
+        <input type="text" name="pedal_edema" required>
+        <label for="anemia">anemia:</label>
+        <input type="text" name="anemia" required>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
